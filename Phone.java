@@ -34,7 +34,7 @@ public class Phone {
 
 	public static Node setGuiElements() {
 
-		VBox vb = new VBox(50);
+		VBox vb = new VBox(35);
 		
 		vb.setAlignment(Pos.TOP_CENTER);
 
