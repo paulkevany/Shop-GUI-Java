@@ -75,6 +75,10 @@ public class Phone {
 				
 			createPhone(Make, Model, StorageSpace);
 			
+			MakeTF.setText("");
+			ModelTF.setText("");
+			StorageTF.setText("");
+			
 			}catch(Exception q) {
 				
 				Alert alert = new Alert(AlertType.WARNING);
@@ -147,6 +151,21 @@ public class Phone {
 		
 		
 	}
+	
+	
+	public  String getMake() {
+		return Phone.Make;
+		
+	}
+	
+	public  String getModel() {
+		return Phone.Model;
+	}
+	
+	public int getStorage() {
+		return Phone.StorageSpace;
+	}
+	
 	
 
 }

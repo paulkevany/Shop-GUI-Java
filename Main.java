@@ -23,7 +23,7 @@ public class Main extends Application {
 			
 			//Create tabs 
 			
-			Tab TVS= new Tab();
+			Tab TVS = new Tab();
 			Tab Phones = new Tab();
 			Tab Orders = new Tab();
 			
