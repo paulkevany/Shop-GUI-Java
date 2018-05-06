@@ -9,11 +9,13 @@ import javafx.scene.layout.BorderPane;
 
 
 public class Main extends Application {
+	
+	
 	@Override
 	public void start(Stage primaryStage) {
 		try {
 			TabPane root = new TabPane();
-			Scene scene = new Scene(root,650,650);
+			Scene scene = new Scene(root,650,500);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.show();
@@ -21,24 +23,25 @@ public class Main extends Application {
 			
 			//Create tabs 
 			
-			Tab TV = new Tab();
-			Tab Phone = new Tab();
+			Tab TVS = new Tab();
+			Tab Phones = new Tab();
 			Tab Orders = new Tab();
 			
 			//Tab settings
 			
-			TV.setText("Buy TV's");
-			Phone.setText("Buy Phone's");
+			TVS.setText("Add TV's");
+			Phones.setText("Add Phone's");
 			Orders.setText("View Orders");
 			
 			//Tab setContent methods
 			
-			//TV.setContent();
-			//Phone.setContent();
+			TVS.setContent(TV.setGuiElements());
+			Phones.setContent(Phone.setGuiElements());
+			Orders.setContent(Order.setGuiElements());
 			
 			
 			//Add tabs to tabPane
-			root.getTabs().addAll(Phone, TV, Orders);
+			root.getTabs().addAll(Phones, TVS, Orders);
 			
 			
 			
