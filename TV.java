@@ -1,5 +1,6 @@
 package application;
 
+import databaseController.TVController;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
@@ -15,6 +16,8 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 
 public class TV {
+	
+	static TVController TVC = new TVController();
 
 	static String TVMake;
 	static int TVSize;
@@ -140,11 +143,37 @@ public class TV {
 
 			TV tv = new TV(TVMake, TVType, TVSize, TV3DCapable);
 
-			//TV is made, Add to arrayLIst
-
-			// pc.savePhone(phone);
+			//Save TV 
+			
+			TVC.saveTV(tv);
 
 		}
 	}
+	
+	
+	public static String getMake() {
+		
+		return TVMake;
+		
+	}
+	
+public static String getType() {
+		
+		return TVType;
+		
+	}
+
+public static int getSize() {
+	
+	return TVSize;
+	
+}
+
+public static String getThreeDCapable() {
+	
+	return TV3DCapable;
+	
+}
+	
 
 }

@@ -25,23 +25,23 @@ public class Main extends Application {
 			
 			Tab TVS = new Tab();
 			Tab Phones = new Tab();
-			Tab Orders = new Tab();
+			Tab Products = new Tab();
 			
 			//Tab settings
 			
 			TVS.setText("Add TV's");
 			Phones.setText("Add Phone's");
-			Orders.setText("View Orders");
+			Products.setText("View Products");
 			
 			//Tab setContent methods
 			
 			TVS.setContent(TV.setGuiElements());
 			Phones.setContent(Phone.setGuiElements());
-			Orders.setContent(Order.setGuiElements());
+			Products.setContent(Product.setGuiElements());
 			
 			
 			//Add tabs to tabPane
-			root.getTabs().addAll(Phones, TVS, Orders);
+			root.getTabs().addAll(Phones, TVS, Products);
 			
 			
 			
